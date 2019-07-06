@@ -24,11 +24,12 @@ public class EditEmployeeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String defaultPage(ModelMap map) {
+		System.out.println("ramesh");
 		return "redirect:/list";
 	}
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public String listEmployees(ModelMap map) {
-		
+	
 		map.addAttribute("employee", new EmployeeEntity());
 		map.addAttribute("employeeList", employeeManager.getAllEmployees());
 
